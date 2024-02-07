@@ -9,5 +9,5 @@ and that's it, now you cd under this directory (where the flake.nix file is loca
 ## about `*.nix` files
 These are [nix](https://nixos.org/) [flakes](https://nixos.wiki/wiki/Flakes) models used to setup the local environement to run pose estimation AI models.
 > still didn't decide which AI model to use, yet
-## tested pose estimation modes
+## tested pose estimation models
 1. MoveNet
