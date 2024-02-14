@@ -24,7 +24,7 @@ pkgs.mkShell {
     source ./venv/bin/activate
     python -m ipykernel install --user --name=venv
     cd venv
-    cp MoveNet_Test_Notebook.ipynb .
+    cp ../MoveNet_Test_Notebook.ipynb .
     jupyter notebook --allow-root
     '';
 }
