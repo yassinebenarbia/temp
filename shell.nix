@@ -26,8 +26,9 @@ pkgs.mkShell {
     python -m venv venv 
     source ./venv/bin/activate
     python -m ipykernel install --user --name=venv
-    which ffmpeg >> paths.txt
     cd venv
+    mkdir models
+    cp ../model.keras ./models/
     ln -s ../MoveNet_Test_Notebook.ipynb .
     jupyter notebook --allow-root
     '';
