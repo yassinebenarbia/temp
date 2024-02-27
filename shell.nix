@@ -12,6 +12,9 @@ pkgs.mkShell {
       python311Packages.ipykernel
       python311Packages.opencv4
       python311Packages.scikit-learn
+      gtk2
+      pkg-config
+      
   ];
 
   LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib/:/run/opengl-driver/lib/";
@@ -23,8 +26,9 @@ pkgs.mkShell {
     python -m venv venv 
     source ./venv/bin/activate
     python -m ipykernel install --user --name=venv
+    which ffmpeg >> paths.txt
     cd venv
-    cp ../MoveNet_Test_Notebook.ipynb .
+    ln -s ../MoveNet_Test_Notebook.ipynb .
     jupyter notebook --allow-root
     '';
 }
